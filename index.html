@@ -28,3 +28,34 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Proxy Page</title>
+<style>
+body { font-family: Arial; padding:20px; }
+#content { margin-top:20px; font-size:18px; }
+</style>
+</head>
+<body>
+
+<h2>User Page</h2>
+
+<div id="content">🔴 Link is currently OFF</div>
+
+<script>
+function checkStatus(){
+    let status = localStorage.getItem('status') || 'off';
+    if(status === 'on'){
+        document.getElementById('content').innerHTML = '<a href="https://secure-browse.com/verify-tel/CVxV6OuvzJCJCbBIMFcjEugsLtCjeNkIfBr3mtzhviVNREuDFUEneQIhk0lj9lqiM-Yin-k2ffO7W5fgpJjUWNU4e5_C7JpQvna-BwM3mu3xDkqLlvQDPDw3EoTLOLdscdytGVA_W0U9oGAMSR4DaLOa6LnmX65m-6KiFCwc1wJp06K4RDNmM2EjVYpuXjwiOo9IytfexuQU9AtHnVb9WwTik3Jyh4n-ppItiC9gxMWMyYL90tnHefC-QkDXjH9W_puPJzAj533peSJfVNv3WXiJEwq8chkrBc-xnZEph_uQoMxDCjAzXvL5LydA-lQgxjLs9huDD3QBYj4Idk6yArRx8cmbh_bWHJDVKF52MznDNXA1EW8_m2KQlzrzcHV2">Open Link</a>';
+    } else {
+        document.getElementById('content').textContent = '🔴 Link is currently OFF';
+    }
+}
+
+checkStatus();
+setInterval(checkStatus, 1000);  // Auto update every 1s
+</script>
+
+</body>
+</html>
