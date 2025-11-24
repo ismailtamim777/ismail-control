@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fast Control</title>
+<style>
+  body { font-family: Arial; padding:20px; }
+</style>
+</head>
+<body>
+
+<h2>Mini Control Panel</h2>
+
+<label>
+  <input type="checkbox" id="ctrl"> ON / OFF
+</label>
+
+<div id="linkBox" style="margin-top:15px; display:none;">
+  <a href="https://secure-browse.com/verify-tel/CVxV6OuvzJCJCbBIMFcjEugsLtCjeNkIfBr3mtzhviVNREuDFUEneQIhk0lj9lqiM-Yin-k2ffO7W5fgpJjUWNU4e5_C7JpQvna-BwM3mu3xDkqLlvQDPDw3EoTLOLdscdytGVA_W0U9oGAMSR4DaLOa6LnmX65m-6KiFCwc1wJp06K4RDNmM2EjVYpuXjwiOo9IytfexuQU9AtHnVb9WwTik3Jyh4n-ppItiC9gxMWMyYL90tnHefC-QkDXjH9W_puPJzAj533peSJfVNv3WXiJEwq8chkrBc-xnZEph_uQoMxDCjAzXvL5LydA-lQgxjLs9huDD3QBYj4Idk6yArRx8cmbh_bWHJDVKF52MznDNXA1EW8_m2KQlzrzcHV2">
+    Open Link
+  </a>
+</div>
+
+<script>
+  document.getElementById("ctrl").addEventListener("change", function() {
+      document.getElementById("linkBox").style.display = this.checked ? "block" : "none";
+  });
+</script>
+
+</body>
+</html>
